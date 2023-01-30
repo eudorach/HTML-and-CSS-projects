@@ -1,0 +1,22 @@
+table {
+boder: 3px solid silver;
+}
+/* makes the border 1 px thick and silver colored */
+
+td:hover{
+background-color: GreenYellow;
+color: red;
+}
+/* makes the table background yellow and font black when hovered */
+
+tr, th{
+background-color: Indigo;
+color: LightSlateGray;
+}
+/* make the top row have black background and font color cornsilk */
+
+tr, td{
+background-color: Moccasin;
+color: black;
+}
+/* makes the remaining rows background dark green and white font */
