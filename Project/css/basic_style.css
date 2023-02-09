@@ -6,10 +6,9 @@ h1 {
     color: rgba (8, 141, 165, 1);
     margin-left: 100px;
     text-shadow: 1px .5px 4px rgba(0,0,0,0.6);
-}
-
-/* in the rgba, the a is the transparency/blurriness. With the test-shadow, the positive x axis number means to the right and positive y axis means down.
+    /* in the rgba, the a is the transparency/blurriness. With the test-shadow, the positive x axis number means to the right and positive y axis means down.
 */
+}
 
 .container{
 width: 450px;
@@ -17,9 +16,9 @@ height: 450px;
 background-color: #faebd7;
 border: 2px solid black;
 border-radius: 5%;
-}
 /* the border radius makes it round. There are 4 corners to a rectangle, so if the four values are the same we can just signify it with one value to represent all 4 corners.
 */
+}
 
 .container .squares:nth-child(-n+4) {
     background-image: url("../images/Icons/icon_1.png");
@@ -31,13 +30,17 @@ border-radius: 5%;
     border: 1px solid black;
     border-radius: 25%;
     cursor: pointer;
+    /* transition-property: ;
+    transition-duration: ;
+    transition-delay: ; 
+    All of these properties above can be written into one line as follows: */
     transition: transform .5s ease-in-out;
+    /* transform specifies transition property, .5s specifies duration, and ease-in-out specifies transition effect */
 }
 /*------------------------------------
 Select all squares in the array
 - before the n means the first square then +4 selets all 4 of the squares
 float means to arrange them side by side
-
 --------------------------------------*/
 .squares:nth-child(-n+4) p {
     font-family: "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
@@ -48,6 +51,7 @@ float means to arrange them side by side
     text-shadow: 2px 1px 4px rgba(0,0,0,0.8);
 }
 
+/* The following specifies background for each of the squares individually */
 .squares:nth-child(1) {
     background: #4240ff;
 }
@@ -62,20 +66,39 @@ float means to arrange them side by side
     background: #00b200;
 }
 
-.container .squares:nth-child(-n+4) :hover{
-    background-image: url("../images/Icons/icon_2.png");
-}
+/* :hover gives the effect desired when hovering over the element */
 
-.squares:nth-child(1) :hover{
+.container .squares:nth-child(-n+4):hover{
+    background-image: url("../images/Icons/icon_2.png");
+    transform: scale(.5);
+    /* scale makes changes and .5 makes the size half */
+    animation-name: race;
+    /* this is defining what we want to call the animation */
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
+}
+.squares:nth-child(1):hover{
     background: #13b4ff;
 }
-.squares:nth-child(2) :hover{
+.squares:nth-child(2):hover{
     background: #d861af;
 }
-.squares:nth-child(3) :hover{
+.squares:nth-child(3):hover{
     background: #81205f;
 }
-.squares:nth-child(4) :hover{
+.squares:nth-child(4):hover{
     background: #77b800;
 }
-/* :hover gives the effect desired when hovering over the element */
+
+/* Animation effects */
+
+@keyframes race {
+    0%, 100%{
+        transform: translateY(0px);
+        background-image: url('../images/Icons/icon_2.png')
+    }
+    50% {
+        transform: translateY(300px);
+    }
+}
