@@ -1,0 +1,39 @@
+body {
+    background: 
+}
+
+.wrap {
+    top: 0;
+    left: 50%;
+    height: auto;
+    width: 100%
+}
+
+.menu-container {
+    top: 0;
+    left: 35%;
+    position: absolute;
+    width: 100%;
+}
+
+.menu {
+    font: bold 12px/18px;
+    font-family: "Papyrus";
+    text-align: center;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li{
+    color: #B3B3B3;
+    display: inline-block;
+    margin-right: -2px /*if the margin is a positive number, there will be space between each box of the menu*/;
+    position: relative;
+    padding: 12px 40px;
+    border: 1px solid #9D9FA2;
+    border-radius: 1.5px /*gives it a rounded edge look*/;
+    background-color: #184352;
+    cursor: pointer;
+}
