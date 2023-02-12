@@ -126,15 +126,11 @@ section {
 
 .menu-container {
     max-height: 340px;
-    margin: 0% auto; /*this is how to center something*/
-    content: "";
-    width: 70%;
+    margin: 0% 25%; /*this is how to center something*/
+    content: " ";
+    width: 50%;
     position: fixed;
     z-index: 100; /*to make sure the menu is always at the top of the stack*/
-}
-
-.menu {
-    list-style: none;
 }
 
 /*-----------------------------------
