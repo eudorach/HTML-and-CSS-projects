@@ -1,5 +1,13 @@
 body {
-    background: url(../images/background/background_botw.png)
+    background: url(../images/background/background_botw.png) no-repeat 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 350px; /*spacer before the main title logo*/
+    padding-bottom: 500px; /*space after main title logo*/
+    color: #184352;
 }
 
 .wrap {
@@ -36,4 +44,86 @@ body {
     border-radius: 1.5px /*gives it a rounded edge look*/;
     background-color: #184352;
     cursor: pointer;
+}
+
+p {
+    font-weight: 300;
+    font-family: "Papyrus";
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+
+.photo {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 1px;
+    border: 1px solid #021a40;
+    background-color: #184352;
+    box-shadow: 2px 2px 10px rgba(0,0.0,0.7);
+}
+
+.photo-container {
+    text-align: center;
+    margin: 15px auto;
+    width: 300px;
+    height: 169px;
+}
+
+.photo-container img {
+    max-width: 70%;
+    width: 300px;
+    height: 169px;
+}
+
+.photo-overlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center; /* for centering text inside .photo*/
+    align-items: center;
+    background: rgba(0,0,0,.5);
+}
+
+.white-head {
+    color: #c9bdaa;
+    font-family: "Papyrus";
+    margin-top: 5%;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+/* Photo Overlay Transitions */
+
+.photo-overlay {
+    opacity: 0;
+    transition: opacity .1s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo-overlay p{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.photo-overlay:hover{
+    opacity: 1;
+}
+
+.photo img{
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.photo:hover img{
+    trasnform: scale(1.1);
 }
