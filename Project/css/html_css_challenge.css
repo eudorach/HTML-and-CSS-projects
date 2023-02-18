@@ -1,0 +1,133 @@
+.navbar {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.menu-container {
+    position: fixed;
+    margin: 0% auto;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu {
+    list-style: none;
+    display: inline;
+    text-decoration: none;
+}
+
+.menu li{
+    font-family: 'Helvetica';
+    background-color: rgba(132, 130, 130, 0.469);
+    display: inline-block;
+    margin: 0% auto;
+    color:rgba(67, 15, 19, 0.645);
+    padding: 15px;
+}
+
+.menu li:hover{
+    color: white;
+    background-color: black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    filter: sepia(75%);
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    padding: 20px;
+    display: center;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th {
+    background-color: grey;
+}
+
+th, td{
+    padding: 12px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.bottom-right {
+    font-family:'Comic Sans';
+    font-size: 12px;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    z-index: 100;
+    margin: 30%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    color: rgba(197, 40, 153, 0.469);
+    height: 300px;
+}
+
+.row::after {
+content: "";
+display: table;
+clear: both;
+}
+
+p:hover{
+    color: rgb(129, 212, 41);
+    text-shadow: 1px 2px 2px rgba(176, 77, 170, 0);
+    background-color:rgba(157, 207, 115, 0.469)
+}
+
+img {
+    display: block inline;
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(60, 103, 15, 0.512);
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+/* somehow got the text over the image but it was not intentional for it to be on the right upper corner. How does this work??*/
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: black;
+  }
