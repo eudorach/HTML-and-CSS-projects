@@ -4,7 +4,7 @@
 	<title>Cats at Home</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/one-page-website.css">
-	
+	<script src="../one_page_website/js/one-page-website.js"></script>
 </head>
 <body>
 	<!--Nav-->
@@ -20,14 +20,14 @@
 	
 	<!--Home-->
 	<div id="home">
-		<div>
+		<div class="images">
 			<h1>Who is Home?</h1>
 			<center>
-				<img src="../images/leon.png" alt="Leon" style="width: 375px;height:500px">
-				<img src="../images/nyang.png" alt="Nyangi" style="width:375px;height:500px">
+			<img src="../images/leon.png" alt="Leon" style="width:375px;height:500px">
+			<img src="../images/nyang.png" alt="Nyangi" style="width:375px;height:500px">
+			</center>	
+		</div>
 				<p> There are two cats at home now who are cohabitating with my family. They are both very unique in their own way. One of them is a grey long hair and the other is a black short haired cat.</p>
-			</center>
-					</div>
 	</div>
 	<!--EndHome-->
 	
@@ -37,9 +37,9 @@
 			<h1>The Cats at Home</h1>
 			<p>These are the two cats that are living at home with us. The cats we have at home look like the images shown below!</p>
 			<center>
-			<p><img src="https://excitedcats.com/wp-content/uploads/2020/06/rsz_shutterstock_1016324941.jpg" alt="Nyang" style="width:350px;height:230px"></p>
+			<p><img src="../images/nyang2.png" alt="Nyang" style="width:375px;height:500px"></p>
 			<p>Nyangi came to our home in 2013 and she is now 16 years old. She is quite the fiesty one. I'd bet she'll live to be 30!</p>
-			<p><img src="https://media-be.chewy.com/wp-content/uploads/2017/03/13085509/black-cat.jpg" alt="Leon" style="width:350px;height:230px"></p>
+			<p><img src="../images/leon2.png" alt="Leon" style="width:375px;height:500px"></p>
 			<p>This is Leon. He was adopted in 2018. He is now 7 years old. He is the skiddish one but he is the one who greets everyone at the front door.</p>
 		</section>			
 	<!--EndPictures-->
@@ -53,7 +53,66 @@
 		<p>Leon plays with little pom poms. He is our family's one and only soccor player. Watch some of the cats play with balls!</p>
 	</center>
 		</section>
-		
+	<div class="row">
+		<p>Look at the all the images below!</p>
+		<div class="column">
+			<img src="../images/nyang.png" onclick="openModal(); currentSlide(1)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="../images/leon.png" onclick="openModal(); currentSlide(2)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="../images/nyang2.png" onclick="openModal(); currentSlide(3)" class="hover-shadow">
+		</div>
+		<div class="column">
+			<img src="../images/leon2.png" onclick="openModal(); currentSlide(4)" class="hover-shadow">
+		</div>
+	</div>
+
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+			<div class="mySlides">
+				<div class="numbertext">1/4</div>
+				<img src="../images/modal images/nyang.png" style="width:75%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">2/4</div>
+				<img src="../images/modal images/leon.png" style="width:75%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">3/4</div>
+				<img src="../images/modal images/nyang2.png" style="width:75%">
+			</div>
+			<div class="mySlides">
+				<div class="numbertext">4/4</div>
+				<img src="../images/modal images/leon2.png" style="width:75%">
+			</div>
+
+			<!--Next/previous controls-->
+			<a class="prev" onclick="pluseSlides(-1)">&#10094;</a>
+			<a class="next" onclick="pluseSlides(1)">&#10095;</a>
+
+			<!--Caption text-->
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!--thumbnail image controls-->
+			<div class="column">
+				<img class="demo" src="../images/nyang.png" onclick="currentSlide(1)" alt="Nyangi">
+			</div>
+			<div class="column">
+				<img class="demo" src="../images/leon.png" onclick="currentSlide(2)" alt="Leon">
+			</div>
+			<div class="column">
+				<img class="demo" src="../images/nyang2.png" onclick="currentSlide(3)" alt="Nyangi2">
+			</div>
+			<div class="column">
+				<img class="demo" src="../images/leon2.png" onclick="currentSlide(4)" alt="Leon2">
+			</div>
+		</div>
+	</div><br>
 	<!--Contact-->
 	<section id="contact">
 		<div class="flex-container">
@@ -86,7 +145,7 @@
 	
 	<!--Footer-->
 	<footer>
-		These pictures and videos are not owned by me.
+		The video is not owned by me.
 	</footer>
 </body>
 </html>
